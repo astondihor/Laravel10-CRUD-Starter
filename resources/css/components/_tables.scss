@@ -1,0 +1,49 @@
+.my-table {
+    @apply w-full text-[13px] text-slate-700/75 font-medium;
+
+    thead {
+        tr {
+            th {
+                @apply px-2 whitespace-nowrap text-left;
+            }
+        }
+    }
+
+    tbody {
+        @apply border-t-2 border-b-2 border-slate-300/75 divide-y divide-slate-300/50;
+        tr {
+            @apply odd:bg-white even:bg-cyan-50/50 hover:bg-cyan-50;
+
+            td {
+                @apply px-2 py-1 whitespace-nowrap text-left;
+            }
+        }
+    }
+
+    .btn {
+        @apply text-[12px] py-1 px-1.5 rounded bg-opacity-75 hover:bg-opacity-100;
+    }
+
+    .btn-icon {
+       @apply text-[12px] p-1 rounded-full bg-opacity-50 hover:bg-opacity-80;
+
+       svg {
+        @apply w-[14px] h-[14px] shrink-0;
+       }
+    }
+
+    .btn-primary {
+        @apply bg-transparent text-blue-300/75 hover:bg-blue-200/75 hover:text-blue-500;
+    }
+
+    .btn-success {
+        @apply bg-transparent text-green-400/75 hover:bg-green-200/75 hover:text-green-500;
+    }
+
+    .btn-danger {
+        @apply bg-transparent text-red-400/50 hover:bg-red-200/75 hover:text-red-500;
+    }
+}
+
+
+

@@ -1,0 +1,11 @@
+.form-input, .form-select, .form-textarea, .form-checkbox {
+    @apply border-slate-300/75 rounded-md shadow-inner leading-none;
+}
+
+.form-label {
+    @apply text-sm mb-0.5 leading-none font-semibold text-slate-500;
+}
+
+.error-text {
+    @apply text-xs leading-none font-medium text-red-500 italic;
+}
