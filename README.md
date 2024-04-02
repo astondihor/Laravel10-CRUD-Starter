@@ -72,9 +72,43 @@ These files generated:
 
 ### Edit Migration file
 
+`database/migrations/20xx_xx_xx_xxxxxx_create_customers_table.php`
+
+```php
+Schema::create('customers', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('email');
+    $table->string('phone');
+    $table->timestamps();
+});
+```
+
 ### Edit Factory File
 
+`database/factories/CustomerFactory.php`
+
+```php
+public function definition(): array
+{
+    return [
+        'name' => $this->faker->name,
+        'email' => $this->faker->safeEmail,
+        'phone' => $this->faker->phoneNumber,
+    ];
+}
+```
+
 ### Edit Seeder File
+
+`database/seeders/CustomerSeeder.php`
+
+```php
+public function run(): void
+{
+    Customer::factory(25)->create();
+}
+```
 
 Run the migration
 
@@ -227,7 +261,7 @@ Move and rename file `resources/views/components/app-layout.blade.php` to `resou
 </html>
 ```
 
-Crete `resources/views/includes/messages.blade.php`
+Create `resources/views/includes/messages.blade.php`
 
 ```php
 @if($message=Session::get('success'))
